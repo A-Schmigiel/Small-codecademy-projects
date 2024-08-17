@@ -29,7 +29,7 @@ class Franchise:
     def available_menus(self, time):
         available_now = []
         for menu in self.menus:
-            if time >= menu.start_time and time <= menu.end_time:
+            if menu.start_time <= time <= menu.end_time:
                 available_now.append(menu)
         return available_now
 
